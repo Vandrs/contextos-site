@@ -1,0 +1,10 @@
+version: '2'
+services:
+  contextos-site:
+    container_name: contextos-site
+    build: ./docker
+    ports: 
+      - "8081:8080"
+    volumes:
+      - ./:/opt/contextos-site
+    command: npm run serve
